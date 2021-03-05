@@ -117,5 +117,35 @@ $\int \frac{dx}{1 + x^2} = \arctg x + C$
 \end{proof}
 
 \subsection{Примеры}
-
+\begin{enumerate}[label=(\roman*), leftmargin=*, itemsep=0.4ex, before={\everymath{\displaystyle}}]%
+\item{
+$\int \sqrt[3]{x} dx = \frac{x^{\frac{4}{3}}}{\frac{4}{3}} + C$
+}
+\item{
+$
+\int (7x^6 + \frac{3}{x^2})dx = 7 \int x^6 dx + 3 \int x^{-2} dx
+= 7 * \frac{x^7}{7} + 3 * \frac{x^{-1}}{-1} + C =\\ x^7 - \frac{3}{x} + C
+$
+}
+\item{
+$
+\int (\sqrt{2x} + \sqrt{\frac{2}{x}})dx = \sqrt{2} \int x^{1/2}dx +
+\sqrt{2} \int x^{-1/2}dx =\\ \frac{\sqrt{2} x^{3/2}}{3/2} +
+\frac{\sqrt{2} x^{1/2}}{1/2} + C
+$
+}
+\item{
+$\int \frac{dx}{\cos 2x + \sin^2 x} =
+\int \frac{dx}{\cos^2 x - \sin^2 x + \sin^2 x} =
+\int \frac{dx}{cos^2 x} =
+\tg x + C$
+}
+\item{
+$
+\int e^{6 - 2x} dx =
+\int \frac{e^{6 - 2x}d(6 - 2x)}{-2} =
+-\frac{1}{2} e^{6 - 2x} + C
+$
+}
+\end{enumerate}
 \end{document}
