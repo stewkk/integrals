@@ -7,6 +7,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{amsthm}
+\usepackage{enumitem}
 
 \title{Интегралы}
 \author{@stewkk}
@@ -16,6 +17,7 @@
 \begin{document}
 \maketitle
 \section{Неопределенные интегралы}
+\subsection{Первообразные функции и неопределенные интегралы}
 Задачей дифференциорования являлось нахождение для функции ее производной.
 Поставим обратную задачу.
 Для каждой функции $f(x)$ найти $F(x)$, $F'(x)=f(x)$
@@ -41,27 +43,79 @@
     \Phi'(x) = 0 \\
     (F_1(x) - F_2(x))' = 0 \\
     \Phi(x) = const \\
-    \Phi(x) = c \\
-    c = F_1(x) - F_2(x) \\
-    F_1(x) = c + F_2(x)
+    \Phi(x) = C \\
+    C = F_1(x) - F_2(x) \\
+    F_1(x) = C + F_2(x)
 \end{gather*}
 \end{proof}
 
 Определение. если мы рассмотрим множество всех первообразных, то можно вести речь о неопределенном интеграле:
-\[ \int f(x)dx = F(x) + c \]
+\[ \int f(x)dx = F(x) + C \]
 
 Свойства неопределенного интеграла:
 \begin{enumerate}
-\item{производная от неопределенного интеграла равна подинтегральной функции, а дифференциал неопределенного интеграла равен подинтегральному выражению:
-\[ (\int f(x)dx)' = (F(x) + c)' \]
-\[ (\int f(x)dx)' = F'(x) + c' \]
+\item{производная от неопределенного интеграла равна подынтегральной функции, а дифференциал неопределенного интеграла равен подынтегральному выражению:
+\[ (\int f(x)dx)' = (F(x) + C)' \]
+\[ (\int f(x)dx)' = F'(x) + C' \]
 \[ (\int f(x)dx)' = f(x) + 0 \]
 }
 \item{
 Постоянный множитель можно выносить за знак интеграла:
 \[ \int kf(x)dx = k \int f(x)dx \]
+\[ (\int kf(x)dx)' = (k \int f(x)dx)' = k( \int f(x)dx)' = kf(x) \]
 }
-
+\item{
+Неопределенный интеграл суммы или разности нескольких выражений равен сумме или разности интегралов этих выражений:
+\[ \int (f(x) \pm g(x))dx = \int f(x)dx \pm \int g(x)dx \]
+}
+\[ (\int(f(x) \pm g(x))dx)' = (\int f(x)dx \pm \int g(x)dx )'  \]
+\[ f(x) \pm g(x) = (\int f(x)dx)' \pm (\int g(x)dx)' \]
+\[ f(x) \pm g(x) = f(x) \pm g(x) \]
 \end{enumerate}
+\subsection{Таблица основных неопределенных интегралов}
+
+\begin{enumerate}[leftmargin=*, itemsep=0.4ex, before={\everymath{\displaystyle}}]%
+\item{
+$\int kdx = kx + C$
+}
+\item{
+$\int x^ndx = \frac{x^{n + 1}}{n + 1} + C$
+}
+\item{
+$\int \sin xdx = - \cos x + C$
+}
+\item{
+$\int \cos xdx = \sin x + C$
+}
+\item{
+$\int \frac{1}{\cos^2 x}dx = \tg x + C$
+}
+\item{
+$\int - \frac{1}{\sin^2 x} dx = \ctg x + C$
+}
+\item{
+$\int e^x dx = e^x + C$
+}
+\item{
+$\int \frac{1}{x}dx = \ln |x| + C$
+} \label{eq-8}
+\item{
+$\int a^xdx = \frac{a^x}{\ln a} + C$
+}
+\item{
+$\int \frac{dx}{\sqrt{1 - x^2}} = \arcsin x + C$
+}
+\item{
+$\int \frac{dx}{1 + x^2} = \arctg x + C$
+}
+\end{enumerate}
+ Пример вывода(\ref{eq-8}):
+\begin{proof}
+\[ \int (\log_{a} x)'dx = \int \frac{1}{x \ln a}dx\]
+\[ \log_{a} x = \frac {1}{\ln a} \int \frac{1}{x} dx \]
+\[ \log_{a} x * \ln a = \int \frac{1}{x} dx \]
+\end{proof}
+
+\subsection{Примеры}
 
 \end{document}
