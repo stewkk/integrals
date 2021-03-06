@@ -55,21 +55,21 @@
 Свойства неопределенного интеграла:
 \begin{enumerate}
 \item{производная от неопределенного интеграла равна подынтегральной функции, а дифференциал неопределенного интеграла равен подынтегральному выражению:
-\[ (\int f(x)dx)' = (F(x) + C)' \]
-\[ (\int f(x)dx)' = F'(x) + C' \]
-\[ (\int f(x)dx)' = f(x) + 0 \]
+\[ \Big(\int f(x)dx \Big)' = \big( F(x) + C \big)' \]
+\[ \Big( \int f(x)dx \Big)' = F'(x) + C' \]
+\[ \Big( \int f(x)dx \Big)' = f(x) + 0 \]
 }
 \item{
 Постоянный множитель можно выносить за знак интеграла:
 \[ \int kf(x)dx = k \int f(x)dx \]
-\[ (\int kf(x)dx)' = (k \int f(x)dx)' = k( \int f(x)dx)' = kf(x) \]
+\[ \Big(\int kf(x)dx \Big)' = \Big(k \int f(x)dx \Big)' = k \Big( \int f(x)dx \Big)' = kf(x) \]
 }
 \item{
 Неопределенный интеграл суммы или разности нескольких выражений равен сумме или разности интегралов этих выражений:
-\[ \int (f(x) \pm g(x))dx = \int f(x)dx \pm \int g(x)dx \]
+\[ \int \big(f(x) \pm g(x) \big)dx = \int f(x)dx \pm \int g(x)dx \]
 }
-\[ (\int(f(x) \pm g(x))dx)' = (\int f(x)dx \pm \int g(x)dx )'  \]
-\[ f(x) \pm g(x) = (\int f(x)dx)' \pm (\int g(x)dx)' \]
+\[ \Big(\int \big(f(x) \pm g(x) \big)dx \Big)' = \Big(\int f(x)dx \pm \int g(x)dx \Big)'  \]
+\[ f(x) \pm g(x) = \Big(\int f(x)dx \Big)' \pm \Big(\int g(x)dx \Big)' \]
 \[ f(x) \pm g(x) = f(x) \pm g(x) \]
 \end{enumerate}
 \subsection{Таблица основных неопределенных интегралов}
@@ -148,4 +148,29 @@ $
 $
 }
 \end{enumerate}
+\clearpage
+\section{Методы вычисления интегралов}
+\subsection{Замена или подведение под дифференциал}
+\subsubsection{замена}
+\begin{align*}
+\int 3^{\frac{x}{4}} dx = \Bigg|
+\begin{split}
+\frac{x}{4} & = t \\
+x & = 4t \\
+dx & = 4dt
+\end{split}
+\Bigg| = \int 3^t 4dt = 4 \int 3^t dt = 4 * \frac{3^t}{\ln 3} + C =
+\frac{4 * 3^{\frac{x}{4}}}{\ln 3} + C
+\end{align*}
+Под знаком интеграла необходимо увидеть функцию и ее производную
+с точностью до постоянного множителя(слагаемого).
+Тогда на данную функцию вводим замену.
+\subsubsection{подведение под дифференциал}
+\[
+\int x^{\frac{x}{4}} dx = \int 4 * 3^{\frac{x}{4}} d\frac{x}{4}
+= 4 \int 3^{\frac{x}{4}} d\frac{x}{4} =
+4 * \frac{3^{\frac{x}{4}}}{\ln 3} + C
+\]
+\subsection{Метод интегрирования по частям}
+Метод основан на интегрировании произведения двух функций:
 \end{document}
