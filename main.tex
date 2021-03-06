@@ -13,6 +13,7 @@
 \author{@stewkk}
 
 \newtheorem{theorem}{Th}
+\newtheorem*{remark}{Примечание}
 
 \begin{document}
 \maketitle
@@ -173,4 +174,41 @@ dx & = 4dt
 \]
 \subsection{Метод интегрирования по частям}
 Метод основан на интегрировании произведения двух функций:
+\[
+    d(uv) = udv + vdu
+\]
+\[
+\int d(uv) = \int \big( udv + vdu \big)
+\]
+\[
+uv = \int udv + \int vdu
+\]
+\begin{equation}
+\int udv = uv - \int vdu
+\end{equation}\label{eq_1}
+Метод интегрирования по частям не позволяет выразить интеграл за
+одно применение, но позволяет перейти к более простому.
+
+Пример:
+\begin{align*}
+\int x * e^{2x} dx = \Bigg|
+\begin{split}
+u & = x\ \ \ \ \ du = dx \\
+dv & = e^{2x} dx \ \ v = \int e^{2x} dx =
+\int \frac{e^{2x} 2x}{2} = \frac{1}{2} * \frac{e^{2x}}{ \ln e} =
+\frac{1}{2}e^{2x}
+\end{split}
+\Bigg| =
+\end{align*}
+\begin{remark}
+Промежуточные действия в замене обычно не пишут.
+\end{remark}
+\[
+= x * \frac{1}{2} e^{2x} - \int \frac{1}{2} e^{2x} dx =
+\frac{x e^{2x}}{2} - \frac{1}{2} \int \frac{e^{2x} d2x}{2} =
+\frac{xe^{2x}}{2} - \frac{e^{2x}}{4} + C
+\]
+\begin{remark}
+"$C$"\ в промежуточных действиях обычно не пишут.
+\end{remark}
 \end{document}
