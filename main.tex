@@ -8,15 +8,25 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{enumitem}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
 
 \title{Интегралы}
-\author{@stewkk}
+\author{\href{https://t.me/stewkk}{@stewkk}}
 
 \newtheorem{theorem}{Th}
 \newtheorem*{remark}{Примечание}
 
 \begin{document}
 \maketitle
+Конспект будет дополняться, актуальная версия на
+\href{https://github.com/stewkk/integrals}{GitHub}.
 \section{Неопределенные интегралы}
 \subsection{Первообразные функции и неопределенные интегралы}
 Задачей дифференциорования являлось нахождение для функции ее производной.
@@ -98,8 +108,9 @@ $\int - \frac{1}{\sin^2 x} dx = \ctg x + C$
 $\int e^x dx = e^x + C$
 }
 \item{
+\label{eq-8}
 $\int \frac{1}{x}dx = \ln |x| + C$
-} \label{eq-8}
+}
 \item{
 $\int a^xdx = \frac{a^x}{\ln a} + C$
 }
@@ -183,7 +194,8 @@ dx & = 4dt
 \[
 uv = \int udv + \int vdu
 \]
-\begin{equation} \label{eq-1}
+\begin{equation}
+\label{eq-1}
 \int udv = uv - \int vdu
 \end{equation}
 Метод интегрирования по частям не позволяет выразить интеграл за
@@ -273,4 +285,9 @@ $P(x)$ и $Q(x)$ многочлены и $Q(x) \neq 0$.
 интегрированию только правильных дробей.
 
 Все правильные дроби разложим на виды:
+
+\subsubsection{примеры}
+\subsection{Интегрирование некоторых видов иррациональности}
+\subsection{Интегрирование тригонометрических функций}
+\section{Определенные интегралы}
 \end{document}
