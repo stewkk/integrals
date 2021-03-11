@@ -285,8 +285,147 @@ $P(x)$ и $Q(x)$ многочлены и $Q(x) \neq 0$.
 интегрированию только правильных дробей.
 
 Все правильные дроби разложим на виды:
+\begin{enumerate}[leftmargin=*, itemsep=0.9ex, before={\everymath{\displaystyle}}]%
+\item{
+$
+\int \frac{dx}{x \pm a} = \int \frac{d(x \pm a)}{x \pm a} =
+\ln |x \pm a| + C
+$
+}
+\item{
+$
+\int \frac{dx}{x^2 - a^2} = (*)\\
+\frac{1}{x^2 - a^2} = \frac{1}{x - a} * \frac{1}{x + a}\\
+\frac{A}{x - a} + \frac{B}{x + a} =
+\frac{A(x + a) + B(x - a)}{(x - a)(x + a)} =
+\frac{x(A + B) + a(A - B)}{(x - a)(x + a)}\\
+\begin{cases}
+A + B = 0\\
+a(A - B) = 1
+\end{cases}\\
+\begin{cases}
+A = -B\\
+a(-2B) = 1
+\end{cases}\\
+B = -\frac{1}{2a}\\
+A = \frac{1}{2a}\\
+\frac{1}{x^2 + a^2} = \frac{1}{2a(x - a)} - \frac{1}{2a(x + a)}\\
+(*) = \int \Big(\frac{dx}{2a(x - a)} = \frac{dx}{2a(x + a)} \Big) =
+\frac{1}{2a} \int \frac{dx}{x - a} -
+\frac{1}{2a} \int \frac{dx}{x + a} =\\
+= \frac{1}{2a} (\ln |x - a| - \ln |x + a|) + C =
+\frac{1}{2a} \ln \big| \frac{x - a}{x + a} \big| + C
+$
+}
+\item{
+$
+\int \frac{dx}{(x \pm a)^2} = \int \frac{d |x \pm a|}{(x \pm a)^2} =
+-(x \pm a)^{-1} + C
+$
+}
+\item{
+$
+\int \frac{xdx}{(x \pm a)^2} =
+\int \frac{x \pm a \mp a}{(x \pm a)^2} dx =
+\int \frac{1}{x \pm a} d(x \pm a) \mp
+\int \frac{a}{(x \pm a)^2} dx =\\
+\ln |x \pm a| \mp a(\frac{-1}{x \pm a}) + C =
+\ln |x \pm a| \pm \frac{a}{x \pm a} + C
+$
+}
+\item{
+$
+\int \frac{xdx}{x^2 \pm a^2} =
+\int \frac{xd(x^2 + a^2)}{x^2 \pm a^2} * \frac{1}{2x} =
+\frac{1}{2} \int \frac{d(x^2 \pm a^2}{x^2 \pm a^2} =
+\frac{1}{2} \ln |x^2 \pm a^2| + C
+$
+}
+\item{
+\begin{align*}
+\int \frac{dx}{x^2 + a^2} = \Bigg|
+\begin{split}
+x & = at\\
+dx & = adt
+\end{split}
+\Bigg|
+= \int \frac{a\ dt}{a^2t^2 + a^2} =
+\frac{1}{a} \int \frac{dt}{t^2 + 1} =
+\frac{1}{a} \arctg \frac{x}{a} + C
+\end{align*}
+}
+\end{enumerate}
 
+Итого:
+\begin{enumerate}[leftmargin=*, itemsep=0.4ex, before={\everymath{\displaystyle}}]%
+\item{
+$
+\int \frac{dx}{x \pm a} =
+\ln |x \pm a| + C
+$
+}
+\item{
+$
+\int \frac{dx}{x^2 - a^2} =
+\frac{1}{2a} \ln \big| \frac{x - a}{x + a} \big| + C
+$
+}
+\item{
+$
+\int \frac{dx}{(x \pm a)^2} =
+-(x \pm a)^{-1} + C
+$
+}
+\item{
+$
+\int \frac{xdx}{(x \pm a)^2} =
+\ln |x \pm a| \pm \frac{a}{x \pm a} + C
+$
+}
+\item{
+$
+\int \frac{xdx}{x^2 \pm a^2} =
+\frac{1}{2} \ln |x^2 \pm a^2| + C
+$
+}
+\item{
+$
+\int \frac{dx}{x^2 + a^2} =
+\frac{1}{a} \arctg \frac{x}{a} + C
+$
+}
+\end{enumerate}
 \subsubsection{примеры}
+\begin{enumerate}[leftmargin=*, itemsep=0.9ex, before={\everymath{\displaystyle}}]%
+\item{
+$
+t = x + 3\\
+\int \frac{dx}{x^2 + 6x - 7} =
+\int \frac{d(x + 3)}{(x + 3)^2 - 16} =
+\int \frac{dt}{t^2 - 4^2} =
+\frac{1}{8} \ln |\frac{t - 4}{t + 4}| + C =\\
+= \frac{1}{8} \ln |\frac{x - 1}{x + 7}| + C\\
+$
+}
+\item{
+$
+t = x - 3\\
+\int \frac{6x + 1}{x^2 - 6x + 8} dx =
+\int \frac{6x + 1}{(x - 3)^2 - 1^2} =
+6\int \frac{(x - 3) + 3\frac{1}{6}}{(x - 3)^2 - 1^2} d(x - 3) =\\
+= 6\int \frac{(x - 3)d(x - 3)}{(x - 3)^2 - 1} + 19 *
+\int \frac{1}{x - 3^2 - 1^2}d(x - 3) =\\
+= 6 \int \frac{t\ dt}{t^2 - 1} + 16 \int \frac{dt}{t^2 - 1}
+$
+}
+\item{
+$
+\int \frac{x + 3}{x^2 - 8x + 25} dx =
+\int \frac{x + 3}{(x - 3)^2 + 9} dx =
+\int \frac{x - 4 + 7}{(x - 4)^2 + 9} dx
+$
+}
+\end{enumerate}
 \subsection{Интегрирование некоторых видов иррациональности}
 \subsection{Интегрирование тригонометрических функций}
 \section{Определенные интегралы}
