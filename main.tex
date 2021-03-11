@@ -427,6 +427,100 @@ $
 }
 \end{enumerate}
 \subsection{Интегрирование некоторых видов иррациональности}
+\begin{enumerate}[leftmargin=*, itemsep=0.9ex, before={\everymath{\displaystyle}}]%
+\item{
+$
+\int \frac{dx}{\sqrt{a^2 - x^2}} =
+\begin{vmatrix} x = at \\ dx = adt \end{vmatrix} =
+\int \frac{adt}{a^2 - a^2t^2} =
+\int \frac{dt}{\sqrt{1 - t^2}} =\\
+= \arcsin t + C = \arcsin \frac{x}{a} + C
+$
+}
+\item{
+$
+\int \frac{dx}{\sqrt{x^2 \pm a}} =
+\int \frac{dt}{t} = \ln |t| + C =
+\ln |x + \sqrt{x^2 + a}| + C\\
+t = x + \sqrt{x^2 \pm a^2}\\
+dt = 1 + \frac{1 * 2x}{2 \sqrt{x^2 \pm a}} dx =
+1 + \frac{x}{\sqrt{x^2 \pm a}} dx + C\\
+= \int \frac{\sqrt{x^2 \pm a} + x}{\sqrt{x^2 \pm a}}dx\\
+dt = \frac{t}{\sqrt{x^2 \pm a}} dx\\
+\frac{dt}{t} = \frac{dx}{\sqrt{x^2 \pm a}}
+$
+}
+\item{
+$
+\int \frac{dx}{\sqrt{x^2 + 5x + 6}} =
+\int \frac{dx}{\sqrt{x^2 + 5x + (\frac{5}{2})^2 - (\frac{5}{2})^2 + 6}} =
+\int \frac{dx}{\sqrt{(x - \frac{5}{2})^2 - \frac{1}{2^2}}} =\\
+= \int \frac{d(x - \frac{5}{2})}{\sqrt{(x - \frac{5}{2})^2 - 
+\frac{1}{4}}} =
+\begin{vmatrix}
+t = (x - \frac{5}{2}) + \sqrt{(x - \frac{5}{2})^2 - 
+\frac{1}{4}}\\
+dt = 1 + \frac{x - \frac{5}{2}}{\sqrt{(x - \frac{5}{2})^2
+- \frac{1}{4}}}
+\end{vmatrix}
+= \sqrt{\frac{dt}{t}} =\\
+= \ln |t| + C =
+\ln \Big|(x - \frac{5}{2}) +
+\sqrt{(x - \frac{5}{2})^2 - \frac{1}{4}} \Big| + C
+$
+}
+\end{enumerate}
 \subsection{Интегрирование тригонометрических функций}
+\[
+\int \sin mx * \cos mx\\
+\int \cos mx * \cos mx\\
+\int \sin mx * \sin mx
+\]
+Для вычисления интегралов данного вида используют тригонометрические
+формулы данных тригонометрических функций.
+
+Рассмотрим интегралы от тригонометрических функций содержащих степени
+\subsubsection{нечетная + четная степень}
+\[
+\int \sin^m x \cos^n x dx
+\]
+при интегрировании таких функций используют основное тригонометрическое
+тождество для выражения четной степени, а оставшуюся нечетную можно
+представить в виде дифференциала.
+Применяется если $m$ и $n$ - одна четная, другая нечетная.
+\[
+\int \cos^6 x \cos^3 x dx =
+\int \sin^6 x * (1 - \sin^2 x) \cos x dx =
+\]
+\[
+= \int (\sin^6 x - \sin^8 x)d \sin x =
+\begin{vmatrix}
+\sin x = t\\
+\ \ 
+\end{vmatrix}
+= \int (t^6 - t^8)dt =
+\]
+\[
+= \frac{t^7}{7} - \frac{t^9}{9} + C
+= \frac{\sin^7 x}{7} - \frac{\sin^9 x}{9} + C
+\]
+\subsubsection{нечетная + нечетная}
+\[
+\int \sin^7 x \cos^3 x dx = \int \sin^7 x(1 - sin^2 x) *
+\frac{\cos x\ d(\sin x)}{\cos x}
+\]
+\subsubsection{четная + четная}
+выносим произодную функции в наименьшей из степеней
+(можно воспользоваться формулой синуса двойного угла или
+понижения степени)
+\[
+\int \sin^6 x \cos^2 x dx = \frac{1}{4} \int (2 \sin x \cos x)^2 *
+\sin^4 x dx =
+\]
+\[
+= \frac{1}{4} \int \sin^2 2x (\frac{1 - \cos 2x}{2})^2 dx =
+\frac{1}{16} \int (1 - \cos^2 2x)(1 - \cos 2x)^2 dx =
+\Bigg|... 
+\]
 \section{Определенные интегралы}
 \end{document}
